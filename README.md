@@ -33,4 +33,4 @@ First do `#include "Ranges.hpp"` and `using Range;`.
    
 As you can see, a range is constructed with the following syntax: `(begin, end)` (parentheses are optional in some cases) and can be iterated over with the range-for loop. You can also create a standalone range object: `auto a = (1_r, 6_r);`.
 
-In order to use a number as a beginning or an end of a range, add the `_r` suffix to it: `6_r` or `-5_r` or `0_r`.
+In order to use a number as the beginning or the end of a range, add the `_r` suffix to it: `6_r` or `-5_r` or `0_r`.
