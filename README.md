@@ -3,7 +3,7 @@ Smart ranges for C++11 range-for loops.
 
 ##How to use
 
-First do `#include "Ranges.hpp"` and `using Range;`.
+First do `#include "Ranges.hpp"` and `using Ranges;`.
 
  1. Loop forward
   
