@@ -8,7 +8,7 @@ First do `#include "Ranges.hpp"` and `using Range;`.
  1. Loop forward
   
    ```
-   for (const auto& i: 0_r, 9_r) /* [0, 9) */
+   for (const auto& i: 0_r, 9) /* [0, 9) */
        std::cout << i << ' ';
    ```
    
@@ -16,7 +16,7 @@ First do `#include "Ranges.hpp"` and `using Range;`.
  2. Loop backward
 
    ```
-   for (const auto& i: 9_r, 0_r) /* [9, 0) */
+   for (const auto& i: 9_r, 0) /* [9, 0) */
        std::cout << i << ' ';
    ```
    
@@ -24,13 +24,37 @@ First do `#include "Ranges.hpp"` and `using Range;`.
  3. Use negative numbers
  
    ```
-   for (const auto& i: -9_r, 0_r) /* [-9, 0) */
+   for (const auto& i: -9_r, 0) /* [-9, 0) */
        std::cout << i << ' ';
    ```
    
    Output: `-9 -8 -7 -6 -5 -4 -3 -2 -1 `
+ 4. Use steps
+   ```
+   for (const int& i: 0_r, 9, 2) /* [0, 2, ..., 8] */
+       cout << i << ' ';
+   ```
    
+   Output: `0 2 4 6 8 `
    
-As you can see, a range is constructed with the following syntax: `(begin, end)` (parentheses are optional in some cases) and can be iterated over with the range-for loop. You can also create a standalone range object: `auto a = (1_r, 6_r);`.
+##Syntax
+```
+for (const int& i: start, stop, step)
 
-In order to use a number as the beginning or the end of a range, add the `_r` suffix to it: `6_r` or `-5_r` or `0_r`.
+    // is almost the same as
+    
+for (int i = start; i < stop; i += step)
+
+```
+
+ 1. `start` - any number to start from. Must be followed by `_r`: `-2_r`, `0_r`, `2_r`.
+ 2. `stop` - any number to stop at (will never be included in the output).
+ 3. `step` (optional) - any number added to `start` at each iteration.
+ 
+You can also create a standalone range object: 
+```
+Range<int> a = (1_r, 6);
+Range<long> b = (1_r, 6, 2);
+```
+
+You may also use `auto` instead of `Range<type>`, of course.
