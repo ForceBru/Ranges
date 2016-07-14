@@ -38,11 +38,11 @@ namespace Range {
         
     public:
 
-        template <typename Integer, typename = std::enable_if<std::is_integral<Integer>::value>
+        template <typename Integer, typename = std::enable_if<std::is_integral<Integer>::value>>
         inline Integer& operator* () { return Integer(this->data); }
         inline bool operator!= (const __Iter rhs) { return this->data != rhs.data; }
         
-        template <typename Integer, typename = std::enable_if<std::is_integral<Integer>::value>
+        template <typename Integer, typename = std::enable_if<std::is_integral<Integer>::value>>
         inline const Integer& operator* () const { return Integer(this->data); }
         inline const bool operator!= (const __Iter rhs) const { return this->data != rhs.data; }
         
