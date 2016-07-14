@@ -58,3 +58,10 @@ Range<long> b = (1_r, 6, 2);
 ```
 
 You may also use `auto` instead of `Range<type>`, of course.
+
+##Speed and memory usage
+ 1. _As fast as a lightning_
+   1. To loop over a range means to simply add or subtract some numbers
+   2. Simple construction
+ 2. _As light as steam_
+   1. A range is simply a few integers
