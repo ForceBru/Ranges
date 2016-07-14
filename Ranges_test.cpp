@@ -1,6 +1,5 @@
 //
 //  MyRange.cpp
-//  Inform
 //
 //  Created by ForceBru on 13.07.16.
 //  Copyright © 2016 ForceBru. All rights reserved.
