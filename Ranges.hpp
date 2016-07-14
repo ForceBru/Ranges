@@ -1,8 +1,7 @@
 //
 //  MyRange.hpp
-//  Inform
-//
-//  Created by Mia on 13.07.16.
+//  
+//  Created by ForceBru on 13.07.16.
 //  Copyright © 2016 ForceBru. All rights reserved.
 //
 
