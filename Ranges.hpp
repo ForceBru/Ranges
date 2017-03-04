@@ -1,5 +1,5 @@
 //
-//  MyRange.hpp
+//  Ranges.hpp
 //
 //  Created by ForceBru on 13.07.16.
 //  Copyright © 2016 ForceBru. All rights reserved.
@@ -8,8 +8,9 @@
 #ifndef Ranges_hpp
 #define Ranges_hpp
 
-namespace Ranges {
 #include <type_traits>
+
+namespace Ranges {
     template<typename Integer>
     class __Range;
     
